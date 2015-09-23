@@ -633,6 +633,23 @@ if(cardnumber1>0 && cardnumber1<=13){
     System.out.println("The "+cardtype4+" of "+suitname4);
     System.out.println("The "+cardtype5+" of "+suitname5);
     
-
+    //first check for three of a kind, aka see if any three card types match
+    if((cardtype1==cardtype2 && cardtype2==cardtype3) || (cardtype1==cardtype3 && cardtype3==cardtype4) || (cardtype1==cardtype4 && cardtype4==cardtype5) || (cardtype1==cardtype2 && cardtype2==cardtype4) || (cardtype1==cardtype2 && cardtype2==cardtype5) || (cardtype1==cardtype3 && cardtype3==cardtype5) || (cardtype2==cardtype4 && cardtype4==cardtype5) || (cardtype2==cardtype3 && cardtype3==cardtype4) || (cardtype3==cardtype4 && cardtype4==cardtype5) || (cardtype2==cardtype3 && cardtype3==cardtype5)){
+        System.out.println(" ");
+        System.out.println("You have three of a kind!");
+    //check for one pair, aka see if any two card types match
+    }else if(cardtype1==cardtype2 || cardtype1==cardtype3 || cardtype1==cardtype4 || cardtype1==cardtype5 || cardtype2==cardtype3 || cardtype2==cardtype4 || cardtype2==cardtype5 || cardtype3==cardtype4 || cardtype3==cardtype5 || cardtype4==cardtype5){
+        //check for another pair, to see if it is a two pair hand
+        //if(two cards have same type different from previous match){
+            //System.out.println(" ");
+            //System.out.println("You have two pairs!");
+        //else{
+            System.out.println(" ");
+            System.out.println("You have a pair!");
+       // }
+    }else{
+    System.out.println(" ");
+    System.out.println("You have a high card hand!");
+}
 }
 }
