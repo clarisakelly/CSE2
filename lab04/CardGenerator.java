@@ -6,10 +6,10 @@
 import java.util.Random;
 
 //define class
-public class CardGenerator{
-public static void main (String[] args){
-    int cardnumber = (int)(Math.random()*53);
-    String suitname, cardtype;
+public class CardGenerator{ 
+    public static void main (String[] args){
+        int cardnumber = (int)(Math.random()*53);
+        String suitname, cardtype;
 
 if(cardnumber>0 && cardnumber<=13){
     suitname = "Diamonds";
@@ -131,7 +131,7 @@ if(cardnumber>0 && cardnumber<=13){
             default: cardtype = "King";
                      break;
         }
-}
+}System.out.println("You picked the "+cardtype+" of "+suitname);
 }
 }
         
