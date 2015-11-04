@@ -16,8 +16,10 @@ for (int i=0; i<52; i++){
   System.out.print(cards[i]+" ");
 }System.out.println();
 shuffle(cards);
+System.out.println("Shuffled: ");
 printArray(cards);
 hand = randomizeHand(cards);
+System.out.println("Your hand: ");
 printArray(hand);
   }
   public static void printArray(String list[]){
@@ -27,13 +29,13 @@ printArray(hand);
   }
   
   public static void shuffle(String list1[]){
-    int a=0;
-    for (int k = 0; k <53; k++){
-      int index = ((int)(Math.random() * 52));
-      a = list1[index];
-      list1[index] = list1[0];
-      list1[0] = a;
-    }
+      int index;
+      for(int k=0; k<53; k++){
+        index = ((int)(Math.random() * 52));
+        String tmp = list1[index];
+        list1[index] = list1[0];
+        list1[0] = tmp;
+      }
   }
   public static String[] randomizeHand(String list2[]){
       String[] anArray = new String[5];
